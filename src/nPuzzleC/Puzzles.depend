@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1398468288 source:c:\users\murilo\desktop\dropbox\aeds iii\lib\fila.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<math.h>
+	"fila.h"
+
+1398430681 c:\users\murilo\desktop\dropbox\aeds iii\lib\fila.h
+
+1398382150 source:c:\users\murilo\desktop\dropbox\aeds iii\puzzles\lib\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"fila.h"
+
+1397659581 c:\users\murilo\desktop\dropbox\aeds iii\puzzles\lib\fila.h
+
+1398830427 source:c:\users\murilo\desktop\dropbox\aeds iii\puzzles\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"../lib/list.h"
+	"../lib/solver.h"
+
+1398696972 source:c:\users\murilo\desktop\dropbox\aeds iii\lib\list.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"list.h"
+
+1398702574 c:\users\murilo\desktop\dropbox\aeds iii\lib\list.h
+
+1398830436 source:c:\users\murilo\desktop\dropbox\aeds iii\lib\solver.c
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	"list.h"
+	"heap.h"
+	"solver.h"
+
+1398830441 c:\users\murilo\desktop\dropbox\aeds iii\lib\solver.h
+
+1398635014 source:c:\users\murilo\desktop\dropbox\aeds iii\lib\heap.c
+	<stdio.h>
+	<stdlib.h>
+	"list.h"
+	"heap.h"
+
+1398629058 c:\users\murilo\desktop\dropbox\aeds iii\lib\heap.h
+

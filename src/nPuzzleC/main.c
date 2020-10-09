@@ -43,7 +43,7 @@ int puzIni(Puzzle *p) {
 
     lstIni(&tiles);
     for (i = 0; i < p->n*p->n; i++)
-        lstAdd(&tiles, i);
+        lstAdd(&tiles, &i);
 
     p->father = NULL;
     strcpy(p->act, "");
@@ -59,7 +59,7 @@ int puzIni(Puzzle *p) {
 
     for (i = 0; i < p->n; i++) {
         for (j = 0; j < p->n; j++) {
-            p->config[i][j] = lstRemoveRand(&tiles);
+            p->config[i][j] = (int)lstRemoveRand(&tiles);
             if (p->config[i][j] == 0) {
                 p->bx = i;
                 p->by = j;
@@ -194,13 +194,12 @@ int puzManhattan(Puzzle *p) {
    the most of the goal state */
 int puzHeuristics(void *itm1, void *itm2){
     Puzzle *i1 = itm1, *i2 = itm2;
-    int h11, h12, h21, h22;
-    h11 = puzManhattan(i1);
-    h12 = puzManhattan(i2);
+    int h21, h22; //h11, h12;
+    //h11 = puzManhattan(i1);
+    //h12 = puzManhattan(i2);
     h21 = puzMisplaced(i1);
     h22 = puzMisplaced(i2);
     if (h21+i1->cost < h22+i2->cost) return 1;
-    //if (h21 + itm1->cost < h22 + itm2->cost) return 1;
     return 0;
 }
 
@@ -234,7 +233,7 @@ int puzIsSolvable(Puzzle *p) {
 
     for (i = 0; i < p->n; i++)
         for (j = 0; j < p->n; j++)
-            lstAdd(&tiles, p->config[i][j]);
+            lstAdd(&tiles, &p->config[i][j]);
 
     a = tiles.first;
     i = j = 0;
@@ -289,6 +288,8 @@ int main() {
 
     } else
         printf("The random puzzle is not solvable. Please, execute the algorithm again!\n");
+
+    system("pause");
 
     return 0;
 }

@@ -7,6 +7,8 @@ Th heuristics used to compute the cost are:
 * Manhattan distance
 * Hamming distance
 
+More information in this [report](https://www.overleaf.com/read/qyfcpvwmbpjj).
+
 # Compile
 To compile the C++ version, use
 ```

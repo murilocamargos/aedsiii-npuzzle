@@ -217,11 +217,6 @@ int main() {
     Puzzle *answer;
 
     initial->randomize();
-
-    int v[9] = {5, 6, 4, 3, 7, 1, 0, 8, 2};
-    for (int i = 0; i < 9; i++)
-        initial->config[i] = v[i];
-    initial->blank = initial->getXY(6);
     initial->heuristic = initial->calcHeuristics();
 
     cout << "Initial State:" << endl;

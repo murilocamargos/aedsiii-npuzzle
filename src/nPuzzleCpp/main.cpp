@@ -51,7 +51,7 @@ pair<int, int> Puzzle::getXY (int pos) {
 }
 
 int Puzzle::isUnsolvable () {
-    int inv = 0, s = pow(this->width, 2), n = this->width;
+    int inv = 0, n = this->width;
     vector<int>::iterator i, j;
 
     // Count number of inversions on the puzzle (see the report)
@@ -91,7 +91,7 @@ void Puzzle::doAction (int action) {
 }
 
 int Puzzle::calcHeuristics () {
-    int mhd = 0, msp = 0, j, i;
+    int mhd = 0, msp = 0, i;
     pair<int, int> pos, goal;
 
     for (i = 0; i < pow(this->width, 2); i++) {
@@ -230,7 +230,7 @@ int main() {
 
     cout << "Final State:" << endl;
     clock_t t = clock();
-    if (answer = solver(initial, goal, &expanded)) {
+    if ((answer = solver(initial, goal, &expanded))) {
         answer->printPuzzle();
         t = clock() - t;
 
@@ -241,6 +241,8 @@ int main() {
         showMoves(answer);
     } else
         cout << " The answer was not found!" << endl;
+
+    system("pause");
 
     return 0;
 }
